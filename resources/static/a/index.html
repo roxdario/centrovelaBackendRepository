@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="userregistrationsystem">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <title>SkillView - Home Page</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link rel="icon" href="img/centaurifavi.png" sizes="16x16" type="image/png">
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <!-- 	<link href="../b/css/v2/css.css" rel="stylesheet"> -->
+    <!-- 	<link href="../b/css/v2/jquery-ui.css" rel="stylesheet"> -->
+    <link href="/a/css/index/bootstrap.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="/a/css/index/all.css" rel="stylesheet"> -->
+    <!-- 	<link href="../b/css/v2/animate.css" rel="stylesheet"> -->
+    <link href="/a/css/index/style.css" rel="stylesheet">
+    <link href="/a/css/index/style-responsive.css" rel="stylesheet">
+    <!-- 	<link href="../b/css/v2/default.css" rel="stylesheet" id="theme"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="/a/css/index/jquery-jvectormap.css" rel="stylesheet">
+    <link href="/a/css/index/bootstrap_calendar.css" rel="stylesheet">
+    <!-- 	<link href="../b/css/v2/jquery.css" rel="stylesheet"> -->
+    <link href="/a/css/index/nv.css" rel="stylesheet">
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+    <link href="/a/css/index/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="/a/css/index/jquery.css" rel="stylesheet">
+    <link href="/a/css/index/css.css" rel="stylesheet">
+    <!-- ================== END PAGE LEVEL STYLE ================== -->
+
+    <!-- ================== BEGIN PROXIMA CSS ================== -->
+    <link href="/a/css/content.css" rel="stylesheet">
+    <link href="/a/css/notice.css" rel="stylesheet">
+    <link href="/a/css/index.css" rel="stylesheet">
+    <!-- ================== END PROXIMA CSS ================== -->
+
+
+
+    <style>
+        @media print {
+            #ghostery-purple-box {
+                display: none !important
+            }
+        }
+    </style>
+
+</head>
+
+<body class="  pace-done">
+    <div class="pace  pace-inactive">
+        <!-- begin #page-loader bar -->
+        <div class="pace  pace-inactive">
+            <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div>
+        </div>
+        <!-- end #page-loader bar -->
+        <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <!-- begin #page-loader -->
+    <div id="page-loader" class="fade show d-none">
+        <span class="spinner"></span>
+    </div>
+    <!-- end #page-loader -->
+
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed show">
+        <!-- begin #header -->
+        <div id="header" class="header navbar-default">
+
+            <!-- begin navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html" style="padding: 0px; margin:auto; margin-top:8px; width:220px;">
+                    <img src="/a/img/centauri.png" style=" margin-left:8px; margin-top:5px; height:70%; width: auto;" title="mycompanylogo">
+                    <label class="skillview">SkillView HR</label>
+                </a>
+            </div>
+            <!-- end navbar-header -->
+
+            <!-- begin header-nav -->
+            <ul class="navbar-nav navbar-right">
+                <li ng-if="checked">
+                    <form class="navbar-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter keyword">
+                            <button type="submit" class="btn btn-search">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" ng-if="$root.checked" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                        <i class="fa fa-bell"></i>
+                        <span class="label">5</span>
+                    </a>
+
+
+
+                    <ul class="dropdown-menu media-list dropdown-menu-right">
+                        <li class="dropdown-header">NOTIFICATIONS (5)</li>
+                        <li class="media">
+                            <a href="javascript:;">
+                                <div class="media-left">
+                                    <i class="fa fa-bug media-object bg-silver-darker"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="media-heading">
+                                        Server Error Reports
+                                        <i class="fa fa-exclamation-circle text-danger"></i>
+                                    </h6>
+                                    <div class="text-muted f-s-11">3 minutes ago</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="media">
+                            <a href="javascript:;">
+                                <div class="media-left">
+                                    <img src="img/v2/user-1.jpg" class="media-object" alt="">
+                                    <i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="media-heading">John Smith</h6>
+                                    <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.
+                                    </p>
+                                    <div class="text-muted f-s-11">25 minutes ago</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="media">
+                            <a href="javascript:;">
+                                <div class="media-left">
+                                    <img src="img/v2/user-2.jpg" class="media-object" alt="">
+                                    <i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="media-heading">Olivia</h6>
+                                    <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.
+                                    </p>
+                                    <div class="text-muted f-s-11">35 minutes ago</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="media">
+                            <a href="javascript:;">
+                                <div class="media-left">
+                                    <i class="fa fa-plus media-object bg-silver-darker"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="media-heading">New User Registered</h6>
+                                    <div class="text-muted f-s-11">1 hour ago</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="media">
+                            <a href="javascript:;">
+                                <div class="media-left">
+                                    <i class="fa fa-envelope media-object bg-silver-darker"></i>
+                                    <i class="fab fa-google text-warning media-object-icon f-s-14"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="media-heading">New Email From John</h6>
+                                    <div class="text-muted f-s-11">2 hour ago</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-footer text-center">
+                            <a href="javascript:;">View more</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown navbar-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="img/v2/user-13.jpg" alt="">
+                        <span class="d-none d-md-inline">Amministratore</span>
+                        <b class="caret"></b>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!-- 						<a href="javascript:;" class="dropdown-item">Edit Profile</a>  -->
+                        <!-- 						<a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>  -->
+                        <!-- 							<a href="javascript:;" class="dropdown-item">Calendar</a>  -->
+                        <!-- 							<a href="javascript:;" class="dropdown-item">Setting</a> -->
+                        <div class="dropdown-divider"></div>
+
+                        <div class="checkbox checkbox-css" style="margin-left:14px">
+                            <label for="checkbox_1">&nbsp;Test</label>
+                            <input type="checkbox" value="" id="checkbox_1" ng-model="$root.checked" ng-init="$root.checked=false">
+
+                        </div>
+                        <a href="javascript:;" class="dropdown-item">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end #header -->
+
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                <div data-scrollbar="true" data-height="100%" style="overflow: hidden; width: auto; height: 100%;" data-init="true">
+                    <!-- begin sidebar user -->
+                    <ul class="nav">
+                        <li class="nav-profile" ng-if="$root.checked">
+                            <a href="javascript:;" data-toggle="nav-profile">
+                                <div class="cover with-shadow"></div>
+                                <div class="image">
+                                    <img src="img/v1/user-13.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <b class="caret pull-right"></b>
+                                    Centauri Academy III
+                                    <small>Team's front end and back end developers</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <ul class="nav nav-profile">
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-cog"></i> Settings</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-pencil-alt"></i> Send Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-question-circle"></i> Helps</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end sidebar user -->
+                    <!-- begin sidebar nav -->
+                    <br>
+                    <ul class="nav">
+                        <!-- 					<li class="nav-header">Navigation</li> -->
+                        <li class="has-sub">
+                            <a href="#/input-csv">
+                                <i class="fa fa-align-left"></i>
+                                <span>Input CSV</span>
+                            </a>
+                        </li>
+
+                        <li class="has-sub">
+                            <a href="#/list-all-candidates">
+                                <i class="fa fa-align-left"></i>
+                                <span>Elenco candidati</span>
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#/list-all-usersurveytoken">
+                                <i class="fa fa-table"></i>
+                                <span>Questionari</span>
+                            </a>
+
+                        </li>
+
+                        <li class="has-sub">
+                            <a href="#home">
+                                <i class="fa fa-home"></i>
+                                <span>Statistiche</span>
+                            </a>
+
+                        </li>
+
+                        <!-- begin sidebar minify button -->
+                        <li>
+                            <a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify">
+                                <i class="fa fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                        <!-- end sidebar minify button -->
+                    </ul>
+                    <!-- end sidebar nav -->
+                </div>
+                <div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 7px; position: absolute; top: 155.269px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 486.218px;"></div>
+                <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+        <!-- end #sidebar -->
+
+        <!-- begin #content -->
+        <div id="content" class="content" data-fl-scrolls ng-view></div>
+        <!-- end #content -->
+
+        <!-- begin scroll to top btn -->
+        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- end scroll to top btn -->
+    </div>
+    <!-- end page container -->
+
+    <!-- START OPERATION NOTICE -->
+    <!-- operation success -->
+    <div id="noticeModalSuccess" align="center" class="notice" ng-if="successMessageBool">
+        <div class="notice-content notice-success" align="center">
+            <strong>Successo!</strong>
+            <label id="successLabel">Operazione completata con successo.</label>
+        </div>
+    </div>
+    <!-- Operation failed -->
+    <div id="noticeModalError" align="center" class="notice" ng-if="errorMessageBool">
+        <div id="errorLabel" class="notice-content notice-error" align="center">
+            <strong>Errore!</strong>
+            {{errorMessage}}
+        </div>
+    </div>
+    <!-- Operation error db -->
+    <div id="noticeModalErrorDB" align="center" class="notice" ng-if="errorDBMessageBool">
+        <div id="dbErrorLabel" class="notice-content notice-error" align="center">
+            <strong>Errore nel Database! </strong>
+            <span>Si è verificato un errore nel database</span>
+        </div>
+    </div>
+    <!-- END OPERATION NOTICE -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <!-- 	<script src="/a/js/index/jquery-3.js"></script> -->
+    <script src="/a/js/index/jquery-3.3.1.min.js"></script>
+    <!-- dashboard -->
+    <script src="/a/js/index/jquery-ui.js"></script>
+    <!-- dashboard -->
+    <script src="/a/js/index/bootstrap.js"></script>
+    <!-- dashboard -->
+    <!--[if lt IE 9]>
+		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../assets/crossbrowserjs/respond.min.js"></script>
+		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+    <script src="/a/js/index/jquery.js"></script>
+    <!-- dashboard -->
+    <!-- 	<script src="/a/js/index/js.js"></script> -->
+    <!-- 	<script src="/a/js/index/default.js"></script> -->
+    <script src="/a/js/index/apps.js"></script>
+    <!-- dashboard -->
+    <!-- ================== END BASE JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS v1 ================== -->
+    <!-- 		<script src="/a/js/index/jquery_003.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery_004.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery_006.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery_005.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery-0.8.3.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery_007.js"></script> -->
+    <!-- 		<script src="/a/js/index/bootstrap-datepicker.js"></script> -->
+    <!-- 		<script src="/a/js/index/dashboard.js"></script> -->
+    <!-- ================== END PAGE LEVEL JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS v2 ================== -->
+    <!-- 		<script src="/a/js/index/d3.js"></script> -->
+    <!-- 		<script src="/a/js/index/nv.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery-jvectormap.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery-jvectormap-world-merc-en.js"></script> -->
+    <!-- 		<script src="/a/js/index/bootstrap_calendar.js"></script> -->
+    <!-- 		<script src="/a/js/index/jquery_002.js"></script> -->
+    <!-- 		<script src="/a/js/index/dashboard-v2.js"></script> -->
+    <!-- ================== END PAGE LEVEL JS ================== -->
+
+    <!-- ================== BEGIN PROXIMA JS ================== -->
+
+    <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+    <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+    <!-- 	<script src="/a/js/jquery-3.3.1.js"></script> -->
+    <script src="/a/js/jquery.flot.min.js"></script>
+    <script src="/a/js/app.js"></script>
+     <script src="/a/js/csvController.js"></script>
+    <script src="/a/js/candidateController.js"></script>
+    <script src="/a/js/userSurveyTokenController.js"></script>
+    <script src="/a/js/statisticsController.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+
+    <script src="/a/js/index/pace.js"></script>
+    <!-- ================== END PROXIMA JS ================== -->
+
+    <script>
+        // 	        paceOptions = {
+        // 			  restartOnPushState: true,
+        // 			  restartOnRequestAfter: true
+        // 			}
+        $(document).ready(function () {
+            App.init();
+            // 			Dashboard.init();
+        });
+    </script>
+    <script>
+        // 		(function(i, s, o, g, r, a, m) {
+        // 			i['GoogleAnalyticsObject'] = r;
+        // 			i[r] = i[r] || function() {
+        // 				(i[r].q = i[r].q || []).push(arguments)
+        // 			}, i[r].l = 1 * new Date();
+        // 			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        // 			a.async = 1;
+        // 			a.src = g;
+        // 			m.parentNode.insertBefore(a, m)
+        // 		})(window, document, 'script',
+        // 				'https://www.google-analytics.com/analytics.js', 'ga');
+
+        // 		ga('create', 'UA-53034621-1', 'auto');
+        // 		ga('send', 'pageview');
+    </script>
+
+    <div class="jvectormap-tip"></div>
+</body>
+
+</html>

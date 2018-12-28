@@ -1,0 +1,140 @@
+/* start -------- content */
+#content thead, th {
+	color: #242a30;
+    font-weight: 600;
+    border-bottom: 1px solid #b6c2c9 !important;
+}
+/* end ------- content */
+
+/* start ------- panel-heading */
+.panel-heading {
+	background: #242a30;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+    width: 100%;
+}
+
+.ui-sortable .panel-heading {
+	cursor: auto !important;
+}
+
+.panel-heading h4 {
+	width: 70%;
+}
+/* end ------- panel-heading */
+
+/* start ------- panel-title */
+label {
+    color: #242a30;
+    font-weight: 600;
+    display: -ms-flexbox;
+/*     display: flex; */
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+}
+.panel-title {
+	position: relative !important;
+    font-size: 12px;
+}
+.panel-title, .panel-title .pull-right {
+    line-height: 20px;
+}
+.panel-title {
+    margin-top: 0;
+}
+.panel-title, .panel > .list-group, .panel > .panel-collapse > .list-group, .panel > .tab-content, .panel > .table {
+    margin-bottom: 0;
+}
+
+.panel-title, .panel-title > .small, .panel-title > .small > a, .panel-title > a, .panel-title > small, .panel-title > small > a {
+    color: inherit;
+}
+/* end ------- panel-title */
+
+.dataTables_wrapper .dataTables_filter {
+    text-align: right;
+}
+
+.table thead th, .table > thead > tr > th {
+    color: #242a30;
+    font-weight: 600;
+    border-bottom: 1px solid #b6c2c9 !important;
+}
+
+.panel-body{
+    padding: 15px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+/*     display in statistics.html riduce dimensione dei pannelli */
+/* 	display: inline-block; */
+
+}
+
+/* CSS for the add button*/
+.panel .panel-heading .btn-control {
+	position: inherit !important;
+	margin-bottom: 0px;
+	bottom: 8px;
+	font-size: 30px;
+	border: none;
+	color: black;
+	cursor: pointer;
+	padding: 20px;
+	float: right !important;
+}
+
+.panel .panel-heading .btn-control-new {
+	background: url(../img/addIcon.png) no-repeat scroll 3px 3px;
+}
+
+.panel .panel-heading .btn-control-reload {
+	background-image: url(../img/reload.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.control-table {
+	 width: 30%;
+	 padding-bottom: 1%;
+	 float: right;
+	 margin-top: -0.6%;
+}
+
+.progress-reload {
+	float: right;
+	width: 30%;
+	height: 2px;
+	margin-right: 2%;
+	margin-top: 17px;
+	vertical-align: middle;
+	border-radius: 3px;
+}
+
+.progress-reload:hover {
+	cursor: pointer;
+}
+
+.progress-bar-reload {
+	border-radius: 3px;
+/* 	width: 0%; */
+	background-color: #228b22;
+/* 	color: #242a30; */
+}
+
+.progress-bar-reload-disabled {
+	background-color: #a94442;
+}

@@ -1,0 +1,152 @@
+<div class="container">
+    <div class="panel">
+        <div class="panel-heading">
+            <h1 class="panel-title">Inserisci nuovo Candidato</h1>
+        </div>
+        <div class="panel-body ">
+            <div class="container">
+                <form class="form-horizontal">
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="firstname">Nome</label>
+                        <div class="col-md-7">
+                            <input type="text" name="firstname" ng-model="myForm.firstname" class="form-control input-sm" placeholder="Inserisci nome"
+                                required maxlength="50"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="lastname">Cognome</label>
+                        <div class="col-md-7">
+                            <input type="text" name="lastname" ng-model="myForm.lastname" class="form-control input-sm" placeholder="Inserisci cognome"
+                                required maxlength="50"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="email">E-Mail</label>
+                        <div class="col-md-7">
+                            <input type="text" name="email" ng-model="myForm.email" class="form-control input-sm" placeholder="Inserisci email" required
+                            maxlength="100"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="dateOfBirth">Data di nascita</label>
+                        <div class="col-md-7">
+                            <input type="date" name="dateOfBirth" ng-model="myForm.dateOfBirth" class="form-control input-sm" placeholder="Inserisci data di nascita"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="domicileCity">Domicilio</label>
+                        <div class="col-md-7">
+                            <input type="text" name="domicileCity" ng-model="myForm.domicileCity" class="form-control input-sm" maxlength="100" placeholder="Inserisci citta' del domicilio"
+                                required maxlength="100"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="domicileStreetName">Via</label>
+                        <div class="col-md-7">
+                            <input type="text" name="domicileStreetName" ng-model="myForm.domicileStreetName" class="form-control input-sm" placeholder="Inserisci via del domicilio"
+                                required maxlength="100"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="domicileHouseNumber">Numero Civico</label>
+                        <div class="col-md-7">
+                            <input type="number" name="domicileHouseNumber" ng-model="myForm.domicileHouseNumber" class="form-control input-sm" placeholder="Inserisci numero civico"
+                                required maxlength="100" />
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="studyQualification">Titoli di studio</label>
+                        <div class="col-md-7">
+                            <input type="text" name="studyQualification" ng-model="myForm.studyQualification" class="form-control input-sm" placeholder="Inserisci titolo di studio"
+                                required maxlength="300"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="mobile">Cellulare</label>
+                        <div class="col-md-7">
+                            <input type="number" name="mobile" ng-model="myForm.mobile" ng-value="mobile"class="form-control input-sm" placeholder="Inserisci cellulare"
+                                required maxlength="20" minlength="5"/>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="graduate">Laurea</label>
+                        <div class="col-md-7">
+                            <input type="checkbox" id="myForm.graduate" ng-model="myForm.graduate" name="graduate" class="form-control input-sm" ng-init="myForm.graduate=false"
+                                ng-checked="myForm.graduate" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="high_graduate">Laurea magistrale</label>
+                        <div class="col-md-7">
+                            <input type="checkbox" id="myForm.highGraduate" ng-model="myForm.highGraduate" name="highGraduate" class="form-control input-sm"
+                                ng-init="myForm.highGraduate=false" ng-checked="myForm.highGraduate" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="still_high_study">Laurea/Laurea Magistrale in corso</label>
+                        <div class="col-md-7">
+                            <input type="checkbox" id="myForm.stillHighStudy" ng-model="myForm.stillHighStudy" name="still_high_study" class="form-control input-sm"
+                                ng-init="myForm.stillHighStudy=false" ng-checked="myForm.stillHighStudy" />
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="imgpath">Immagine Profilo <img src="../../a/img/info.png" width="25" height="25"
+                                border="6" title="Formati: .jpg, .jpeg, .png Dimesione massima: 5MB" data-toggle="tooltip">
+                        </label>
+                        <br>
+                    
+                        <div class="col-md-7">
+                            <input type="file" file-model="myForm.files[0]" class="form-control input-sm" accept=".jpg, .jpeg, .png" onchange="loadFile(event)" 
+                            />
+                            <img id="output" width="60" height="60" border="0" />
+
+                        </div>
+                    </div>
+                    <script>
+                        var loadFile = function (event) {
+                            var output = document.getElementById('output');
+                            output.src = URL
+                                .createObjectURL(event.target.files[0]);
+                            console.log("output.src : " + output.src);
+                        };
+                    </script>
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-lable" for="cvExternalPath">Curriculum Vitae <img src="../../a/img/info.png" width="25" height="25"
+                                border="6" title="Formati: .docx, .pdf, .doc Dimesione massima: 5MB" data-toggle="tooltip"> </label>
+                        <div class="col-md-7">
+                            <input type="file" file-model="myForm.files[1]" class="form-control input-sm" accept=".docx, .pdf, .doc" />
+                        </div>
+
+                    </div>
+
+                    <div align="center">
+
+                        <!-- <input type="submit" value="Register User" class="btn btn-primary btn-sm"> -->
+                        <button type="submit" ng-click="submitUserForm()" class="btn btn-primary btn-sm">Inserisci</button>
+                        <button type="button" ng-click="resetForm()" class="btn btn-warning btn-sm">Cancella</button>
+                        <!-- <input type="hidden" name="id" id="idCandidate" value=""> -->
+                        <a href="#/list-all-candidates" type="button" class="btn btn-danger btn-sm">Indietro</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

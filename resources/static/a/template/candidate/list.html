@@ -1,0 +1,131 @@
+<div class="container">
+	<div class="panel" style="display: inline-block;">
+	
+		<div class="panel-heading">
+			<h1 class="panel-title">
+				Lista candidati
+				<!-- div aggiorna pagina -->
+				<div class="control-table" align="right">
+					<a href="#/insert-new-candidate" class="btn-control btn-control-new" role="button"></a>
+					<a href="" class="btn-control btn-control-reload" ng-click="listCand()" role="button"></a>
+					<div class="progress progress-reload" ng-click="autoReload()">
+						<div id="candidatebar" class="progress-bar progress-bar-reload" role="progressbar" style="width:{{reloadCandidate}}%"></div>
+					</div>
+				</div>
+			</h1>
+		</div>
+		
+		<div class="panel-body">
+			<div ng-controller="CandCtrl" id="data-table-default_wrapper"
+				class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="dataTables_length" id="data-table-default_length">
+							<label>Visualizza <select id="mySelect"   ng-options="option.value for option in data.availableOptions track by option.id"
+      								ng-model="data.selectedOption" ng-change="getSelectedCandidates()" name="data-table-default_length" aria-controls="data-table-default" class="form-control input-sm">
+<!-- 								<option value="10">10</option> -->
+<!-- 								<option value="25">25</option> -->
+<!-- 								<option value="50">50</option> -->
+<!-- 								<option value="100">100</option> -->
+								</select> candidati
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div id="data-table-default_filter" class="dataTables_filter">
+							<label>Cerca: <input type="search" ng-model="search"
+								class="form-control input-sm" placeholder=""
+								aria-controls="data-table-default"></label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<table id="data-table-default"
+							class="table table-striped table-bordered dataTable no-footer dtr-inline"
+							role="grid" aria-describedby="data-table-default_info"
+							style="width: 1040px;">
+							<thead>
+								<tr role="row">
+<!-- 									<th>#</th> -->
+									<th></th>
+									<th>Email</th>
+									<th>Nome</th>
+									<th>Cognome</th>
+									<th>Cellulare</th>
+<!-- 									<th>cvExternalPath</th> -->
+									<th width="100"></th>
+									<th width="100"></th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr ng-repeat="current in list | filter:search"
+									class="gradeX odd" role="row">
+<!-- 									<td class="f-s-600 text-inverse sorting_1" tabindex="0" -->
+<!-- 										width="1%">1</td> -->
+									<td><img id='imgUser' src='{{imgFullPath + current.imgpath}}'
+										alt='prova' height='42' width='42'></td>
+									<td>{{current.email}}</td>
+									<td>{{current.firstname}}</td>
+									<td>{{current.lastname}}</td>
+									<td>{{current.mobile}}</td>
+<!-- 									<td>{{current.cvExternalPath}}</td> -->
+									<td>
+										<button type="button"
+											ng-click="editCandidateCustom(current.id)"
+											class="btn btn-primary custom-width">
+											<span class="glyphicon glyphicon-edit"> </span> Modifica
+										</button>
+									</td>
+									<td>
+										<button type="button"
+											ng-click="deleteCandidateCustom(current.id)"
+											class="btn btn-danger custom-width">
+											<span class="glyphicon glyphicon-remove"> </span> Cancella
+										</button>
+									</td>
+								</tr>
+							</tbody>
+
+						</table>
+					</div>
+				</div>
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-sm-7"> -->
+<!-- 						<div class="dataTables_paginate paging_simple_numbers" -->
+<!-- 							id="data-table-default_paginate"> -->
+<!-- 							<ul class="pagination"> -->
+<!-- 								<li class="paginate_button previous disabled" -->
+<!-- 									id="data-table-default_previous"><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="0" tabindex="0">Previous</a></li> -->
+<!-- 								<li class="paginate_button active"><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="1" tabindex="0">1</a></li> -->
+<!-- 								<li class="paginate_button "><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="2" tabindex="0">2</a></li> -->
+<!-- 								<li class="paginate_button "><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="3" tabindex="0">3</a></li> -->
+<!-- 								<li class="paginate_button "><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="4" tabindex="0">4</a></li> -->
+<!-- 								<li class="paginate_button "><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="5" tabindex="0">5</a></li> -->
+<!-- 								<li class="paginate_button "><a href="#" -->
+<!-- 									aria-controls="data-table-default" data-dt-idx="6" tabindex="0">6</a></li> -->
+<!-- 								<li class="paginate_button next" id="data-table-default_next"><a -->
+<!-- 									href="#" aria-controls="data-table-default" data-dt-idx="7" -->
+<!-- 									tabindex="0">Next</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<button ng-disabled="currentPage == 1" ng-click="prevPage()">
+			        Previous
+			    </button>
+			    {{currentPage}}/{{totalPages}}
+			    <button ng-disabled="currentPage == totalPages" ng-click="nextPage()">
+			        Next
+			    </button>
+			</div>
+		</div>
+		
+	</div>
+</div>

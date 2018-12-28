@@ -1,0 +1,20 @@
+.skillview {
+/* 	float: right; */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 1.4rem;
+	margin-top: 0.3rem;
+	text-shadow: 1px 1px 1px #aaa;
+/* 	color: black; */
+/* 	margin-left: 50px; */
+	cursor: pointer;
+}
+
+.pace-progress, .pace::before, pace-progress-inner {
+	/* 	per desktop */
+	top: 58px;
+	/* 	per cellulare */
+	/* 	top: 23%; */
+	z-index: 1030;
+}
+

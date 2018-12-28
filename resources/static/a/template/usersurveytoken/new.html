@@ -1,0 +1,64 @@
+<div class="container">
+	<div class="panel">
+		<div class="panel-heading">
+			<h1 class="panel-title">Registra un nuovo questionario</h1>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+				<form ng-submit="submitUserForm()" name="myForm"
+					class="form-horizontal">
+					<div class="form-group col-md-12">
+
+
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="userId">Utente</label>
+							<div class="col-md-7">
+								<!-- 								<select name="surveyId"" id="userId" ng-model="userSurveyToken.user"    ng-options="obj as obj.email for obj in users track by obj.id"> -->
+
+								<!-- 								</select> -->
+								<select id="userId" ng-model="userToken">
+									<option ng-repeat="operator in users" value="{{operator.id}}">
+										{{operator.email}}</option>
+								</select>
+
+							</div>
+						</div>
+
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="surveyId">Questionario</label>
+							<div class="col-md-7">
+<!-- 								<select name="surveyId"" id="surveyId"   ng-model="userSurveyToken.survey" ng-options="obj as obj.label for obj in surveys track by obj.id"> -->
+
+<!-- 								</select>  -->
+
+								<select id="surveyId" ng-model="surveyToken">
+									<option ng-repeat="operator in surveys" value="{{operator.id}}">
+										{{operator.label}}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="expirationDate">Giorno
+								scadenza questionario <img src="../../a/img/info.png" width="25" height="25"
+                                border="6" title="Indicare il giorno di scadenza del Token, dal giorno indicato non sarà più possibile compilare il questionario" data-toggle="tooltip"></label>
+							<div class="col-md-7">
+								<input type="date" ng-model="expirationdate" id="expirationdate"
+									class="form-control input-sm" />
+							</div>
+						</div>
+						<div align="center">
+							<input type="submit" value="Inserisci"
+								class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()"
+								class="btn btn-warning btn-sm">Reset</button>
+							<a href="#/list-all-usersurveytoken" type="button"
+								class="btn btn-danger btn-sm">Indietro e annulla</a>
+							<input type="hidden" name="id" id="id" value="">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
